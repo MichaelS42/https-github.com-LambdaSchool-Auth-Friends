@@ -17,11 +17,11 @@ const Login = (props) => {
     e.preventDefault();
     console.log(username);
     console.log(password);
-    console.log(window.locaalStorage.getItem("authToken"));
+    console.log(window.localStorage.getItem("authToken"))
 
     const credentials = {
       usename: username,
-      password: password,
+      password: password
     };
 
     axiosAuth()

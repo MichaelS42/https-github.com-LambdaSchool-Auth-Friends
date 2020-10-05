@@ -1,11 +1,11 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const axiosAuth = () => {
-    const token = window.localStorage.getItem("authToken")
-    return axios.create({
-        headers: {
-            "authorization": `${token}`,
-        },
-        baseURL: "http://localhost:5000/api"
-    })
-}
+  const token = window.localStorage.getItem("authToken");
+  return axios.create({
+    headers: {
+      "Authorization": `${token}`,
+    },
+    baseURL: "http://localhost:5000/api"
+  });
+};
