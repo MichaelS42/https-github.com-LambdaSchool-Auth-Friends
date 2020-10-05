@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Form from "./components/Form";
-import { PrivateRoute } from "./utils/PrivateRoute";
+import  PrivateRoute  from "./utils/PrivateRoute";
 import Login from "./components/Login";
 import FriendsList from "./components/FriendsList";
 
@@ -17,12 +17,12 @@ function App() {
           <li>
             <Link to="/protected"> Protected Page</Link>
           </li>
-          <Link to="/friendsform">FORM</Link>
+          <Link to="/form">FORM</Link>
         </ol>
         <Switch>
-          <PrivateRoute exact path="/protectd" component={FriendsList} />
-          <PrivateRoute exact path="/friendsform" component={Form} />
           <Route path="/login" component={Login} />
+          <PrivateRoute exact path="/protected" component={FriendsList} />
+          <PrivateRoute exact path="/form" component={Form} />
         </Switch>
       </div>
     </Router>

@@ -18,7 +18,7 @@ const Form = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axiosAuth()
-      .post("./friends", friend)
+      .post("/friends", friend)
       .then((res) => console.log(res.data))
       .catch((err) => console.log("error ", err));
     setTimeout(() => {

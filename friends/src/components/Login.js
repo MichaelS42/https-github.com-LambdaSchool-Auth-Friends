@@ -17,11 +17,11 @@ const Login = (props) => {
     e.preventDefault();
     console.log(username);
     console.log(password);
-    console.log(window.localStorage.getItem("authToken"))
+    console.log(window.localStorage.getItem("authToken"));
 
     const credentials = {
-      usename: username,
-      password: password
+      username: username,
+      password: password,
     };
 
     axiosAuth()
@@ -45,7 +45,7 @@ const Login = (props) => {
           onChange={handleUserName}
         />
         <input
-          type="text"
+          type="password"
           name="password"
           value={password}
           onChange={handlePassword}
