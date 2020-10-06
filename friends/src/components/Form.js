@@ -20,10 +20,10 @@ const Form = (props) => {
     axiosAuth()
       .post("/friends", friend)
       .then((res) => console.log(res.data))
+      setTimeout(() => {
+        props.history.push("/protected")
+      }, 2000)
       .catch((err) => console.log("error ", err));
-    setTimeout(() => {
-      props.history.push("/protected");
-    }, 2000);
   };
 
   return (
